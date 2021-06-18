@@ -1,0 +1,97 @@
+Clinic: Id, Name, Location, Telephone, Timings, Email
+Doctor: Id, First Name, Last Name, Email, Mobile, Location, CNIC, ClinicID,  Qualification
+Patient: Id, First Name, Last Name, Email, Mobile, Location, CNIC
+Appointment: Id, Doctor Id, Patient Id, Date, Time,  Status
+Appointment-Info: Id, Appointment Id, Prescription, Medicine
+
+
+
+
+
+
+
+----- Only Get -----
+
+Url:
+
+path(r"users/", UserViewSet.as_view()),
+path(r"users/<int:pk>/", UserViewSet.as_view())
+
+Serializer:
+
+class UserSerializer(ModelSerializer):
+    role_name = serializers.ReadOnlyField(source='role.name')
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'password', 'email', 'role', 'role_name', 'phone', 'first_name', 'last_name')
+
+View:
+class UserViewSet(APIView):
+
+    def get_object(self, pk):
+        try:
+            return User.objects.get(pk = pk)
+        except User.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk = None, format = None):
+        if pk:
+            user = self.get_object(pk)
+            serializer = UserSerializer(user)
+            return Response(serializer.data)
+        else:
+            users = User.objects.all()
+            serializer = UserSerializer(users, many = True)
+            return Response(serializer.data)
+
+----- All -----
+
+Url:
+
+router.register(r'roles', RolesViewSet, basename='roles')
+
+Serializer:
+
+class RolesSerializer(ModelSerializer):
+    form_name = serializers.ReadOnlyField(source='form.name')
+    class Meta:
+        model = Roles
+        fields = ('id', 'name', 'form', 'form_name', 'form_read')
+
+View:
+
+class RolesViewSet(viewsets.ModelViewSet):
+    serializer_class = RolesSerializer
+    permission_classes = (IsAuthenticated,)
+    queryset = Roles.objects.all()
+
+
+
+
+class SnippetList(APIView):
+    """
+    List all snippets, or create a new snippet.
+    """
+    def get(self, request, format=None):
+        snippets = Snippet.objects.all()
+        serializer = SnippetSerializer(snippets, many=True)
+        return Response(serializer.data)
+
+    def post(self, request, format=None):
+        serializer = SnippetSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+{
+        "Prescription" : 1,
+        "AppointmentID" : 1,
+        "Medicine":""
+}
+
+
+
