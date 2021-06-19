@@ -21,6 +21,7 @@
       class="font-weight-light text-h5"
       v-text="name"
     />
+    
 
     <v-spacer />
 

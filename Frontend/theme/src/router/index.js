@@ -31,7 +31,13 @@ const router = new Router({
       route('Typography', null, 'components/typography'),
 
       // Tables
-      route('Regular Tables', null, 'tables/regular'),
+      route('Clinic Table', null, 'tables/clinic'),
+      route('Doctor Table', null, 'tables/doctor'),
+      route('Patient Table', null, 'tables/patient'),
+      route('Appointment Table', null, 'tables/appointment'),
+      route('AppointmentDetailsTable', null, 'tables/appointmentinfo'),
+      
+
 
       // Maps
       route('Google Maps', null, 'maps/google'),

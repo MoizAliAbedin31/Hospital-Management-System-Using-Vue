@@ -18,9 +18,29 @@ const state = {
       to: '/components/profile/',
     },
     {
-      title: 'Regular Tables',
+      title: 'Doctor Table',
+      icon: 'mdi-account-plus-outline',
+      to: '/tables/doctor/',
+    },
+    {
+      title: 'Clinic Table',
+      icon: 'mdi-ambulance',
+      to: '/tables/clinic/',
+    },
+    {
+      title: 'Patient Table',
+      icon: 'mdi-account-multiple-plus',
+      to: '/tables/patient/',
+    },
+    {
+      title: 'Appointment Table',
+      icon: 'mdi-alarm-plus',
+      to: '/tables/appointment/',
+    },
+    {
+      title: 'Appointment Details',
       icon: 'mdi-clipboard-outline',
-      to: '/tables/regular/',
+      to: '/tables/appointmentinfo/',
     },
     {
       title: 'Typography',

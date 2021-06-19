@@ -11,8 +11,8 @@
   export default {
     name: 'App',
     metaInfo: {
-      title: 'App',
-      titleTemplate: '%s | Material Dashboard Free',
+      title: 'Hospital',
+      titleTemplate: '%s  Management System',
       htmlAttrs: { lang: 'en' },
       meta: [
         { charset: 'utf-8' },

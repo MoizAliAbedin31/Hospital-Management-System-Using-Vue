@@ -3,15 +3,15 @@
     <v-list-item-avatar>
       <v-img
         :src="
-          require('@/assets/vmd.svg')"
+          require('@/assets/Hospital_logo.png')"
       />
     </v-list-item-avatar>
 
     <v-list-item-content class="pl-2">
       <v-list-item-title class="text-h3">
-        <strong class="mr-1 font-weight-black">VMD</strong>
+        <strong class="mr-1 font-weight-black">HM</strong>
 
-        <span class="primary--text">FREE</span>
+        <span class="primary--text">S</span>
       </v-list-item-title>
     </v-list-item-content>
   </v-list-item>
