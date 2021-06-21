@@ -12,11 +12,11 @@ const state = {
       icon: 'mdi-view-dashboard',
       to: '/',
     },
-    {
-      title: 'User Profile',
-      icon: 'mdi-account',
-      to: '/components/profile/',
-    },
+    // {
+    //   title: 'User Profile',
+    //   icon: 'mdi-account',
+    //   to: '/components/profile/',
+    // },
     {
       title: 'Doctor Table',
       icon: 'mdi-account-plus-outline',
@@ -42,26 +42,36 @@ const state = {
       icon: 'mdi-clipboard-outline',
       to: '/tables/appointmentinfo/',
     },
-    {
-      title: 'Typography',
-      icon: 'mdi-format-font',
-      to: '/components/typography/',
-    },
-    {
-      title: 'Icons',
-      icon: 'mdi-chart-bubble',
-      to: '/components/icons/',
-    },
-    {
-      title: 'Google Maps',
-      icon: 'mdi-map-marker',
-      to: '/maps/google/',
-    },
-    {
-      title: 'Notifications',
-      icon: 'mdi-bell',
-      to: '/components/notifications/',
-    },
+    // {
+    //   title: 'Register',
+    //   icon: 'mdi-clipboard-outline',
+    //   to: '/register',
+    // },
+    // {
+    //   title: 'Login',
+    //   icon: 'mdi-clipboard-outline',
+    //   to: '/login',
+    // },
+    // {
+    //   title: 'Typography',
+    //   icon: 'mdi-format-font',
+    //   to: '/components/typography/',
+    // },
+    // {
+    //   title: 'Icons',
+    //   icon: 'mdi-chart-bubble',
+    //   to: '/components/icons/',
+    // },
+    // {
+    //   title: 'Google Maps',
+    //   icon: 'mdi-map-marker',
+    //   to: '/maps/google/',
+    // },
+    // {
+    //   title: 'Notifications',
+    //   icon: 'mdi-bell',
+    //   to: '/components/notifications/',
+    // },
   ],
 }
 

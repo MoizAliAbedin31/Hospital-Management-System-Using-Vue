@@ -3,7 +3,6 @@
     <view-intro heading="Hospital Management Tables"  />
 
 <material-card
-      dark
       icon="mdi-clipboard-plus"
       icon-small
       title="Appointment Table"

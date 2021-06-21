@@ -23,12 +23,12 @@ const router = new Router({
       route('Dashboard'),
 
       // Pages
-      route('UserProfile', null, 'components/profile'),
+      // route('UserProfile', null, 'components/profile'),
 
       // Components
-      route('Notifications', null, 'components/notifications'),
-      route('Icons', null, 'components/icons'),
-      route('Typography', null, 'components/typography'),
+      // route('Notifications', null, 'components/notifications'),
+      // route('Icons', null, 'components/icons'),
+      // route('Typography', null, 'components/typography'),
 
       // Tables
       route('Clinic Table', null, 'tables/clinic'),
@@ -38,9 +38,12 @@ const router = new Router({
       route('AppointmentDetailsTable', null, 'tables/appointmentinfo'),
       
 
+      //Register/Login
+      route('Register', null, '/register'),
+      route('Login', null, '/login'),
 
       // Maps
-      route('Google Maps', null, 'maps/google'),
+      // route('Google Maps', null, 'maps/google'),
     ]),
   ],
 })

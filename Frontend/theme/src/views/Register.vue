@@ -1,6 +1,6 @@
 <template>
   <v-container
-    id="user-profile-view"
+    id="register-view"
     fluid
     tag="section"
   >
@@ -122,14 +122,31 @@
                 
                 <v-col
                   cols="12"
+                  md="9"
                   class="text-right"
                 >
                   <v-btn
                     color="primary"
-                    min-width="150"
+                    min-width="120"
                     @click="addData();"
                   >
-                   Save
+                   Register
+                  </v-btn>
+                </v-col>
+                <v-col
+                  cols="12"
+                  md="3"
+                  class="text-right"
+                >
+                  <v-btn
+                    color="primary"
+                    min-width="120"
+                    text
+                    @click=" gotologin();  
+                    dialog = false;"
+                    
+                  >
+                   Login
                   </v-btn>
                 </v-col>
               </v-row>
@@ -156,6 +173,13 @@
         (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
       ],
       }
+    },
+
+    methods:{
+         gotologin(){
+   this.$router.push('/login'); 
+      }
+
     }
    }
 </script>
