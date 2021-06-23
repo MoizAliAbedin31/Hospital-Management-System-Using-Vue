@@ -1,6 +1,6 @@
 <template>
   <v-container
-    id="register-view"
+    id="patient-register-view"
     fluid
     tag="section"
   >
@@ -14,7 +14,7 @@
           icon="mdi-account-outline"
         >
           <template #title>
-            Register 
+             Doctor Registration Form  
           </template>
 
           <v-form>
@@ -71,15 +71,16 @@
                   md="6"
                 >
                   <v-text-field
-                    color="purple"
-                    label="Mobile Number"
-                     v-model="obj['Mobile']"
-                  />
+                    type="password"
+                    label="Password"
+                    v-model="obj['Password']" 
+                    ></v-text-field>
+                 
                 </v-col>
 
                 <v-col
                   cols="12"
-                  md="4"
+                  md="6"
                 >
                   <v-autocomplete
                   :rules="reqRules"
@@ -98,7 +99,7 @@
 
                 <v-col
                   cols="12"
-                  md="4"
+                  md="6"
                 >
                   <v-text-field
                     color="purple"
@@ -109,7 +110,7 @@
 
                 <v-col
                   cols="12"
-                  md="4"
+                  md="6"
                 >
                   <v-text-field
                     color="purple"
@@ -119,6 +120,16 @@
                   />
                 </v-col>
 
+                <v-col
+                  cols="12"
+                  md="6"
+                >
+                  <v-text-field
+                    color="purple"
+                    label="Mobile Number"
+                     v-model="obj['Mobile']"
+                  />
+                </v-col>
                 
                 <v-col
                   cols="12"
@@ -149,7 +160,7 @@
                    Login
                   </v-btn>
                 </v-col>
-              </v-row>
+              </v-row>  
             </v-container>
           </v-form>
         </material-card>

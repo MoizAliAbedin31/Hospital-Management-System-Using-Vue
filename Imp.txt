@@ -94,6 +94,12 @@ class SnippetList(APIView):
 }
 
 
+{
+            "email":"shastri@pakao.com",
+            "password":"hello123",
+            "user_type":"Patient"
+        }
+
 
 
 git init

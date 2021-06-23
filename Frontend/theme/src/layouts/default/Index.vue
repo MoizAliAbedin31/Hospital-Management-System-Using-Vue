@@ -1,17 +1,17 @@
 <template>
   <v-app>
-    <default-bar v-if="$route.name != 'Login' && $route.name != 'Register'">
+    <default-bar v-if="$route.name != 'Login' && $route.name != 'Clinic Register' && $route.name != 'Doctor Register' && $route.name != 'Patient Register'">
     </default-bar>
 
     <default-drawer
-      v-if="$route.name != 'Login' && $route.name != 'Register'"
+      v-if="$route.name != 'Login' && $route.name != 'Clinic Register' && $route.name != 'Doctor Register' && $route.name != 'Patient Register'"
     />
 
     <default-view />
 
-    <default-footer v-if="$route.name != 'Login' && $route.name != 'Register'" />
+    <default-footer v-if="$route.name != 'Login' && $route.name != 'Clinic Register' && $route.name != 'Doctor Register' && $route.name != 'Patient Register'" />
 
-    <default-settings v-if="$route.name != 'Login' && $route.name != 'Register'" />
+    <default-settings v-if="$route.name != 'Login' && $route.name != 'Clinic Register' && $route.name != 'Doctor Register' && $route.name != 'Patient Register'" />
   </v-app>
 </template>
 

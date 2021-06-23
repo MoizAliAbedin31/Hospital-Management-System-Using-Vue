@@ -29,6 +29,8 @@ ALLOWED_HOSTS=['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
 
+AUTH_USER_MODEL = 'hospital_app.User'
+
 # Application definition
 
 INSTALLED_APPS = [

@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db.models import fields
 from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
@@ -38,3 +39,15 @@ class AppointmentInfoDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = AppointmentInfo
         fields = '__all__'
+
+
+class UserSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = User
+        fields = ['email', 'password', 'user_type'] 
+
+
+       
+
+

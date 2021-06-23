@@ -1,5 +1,8 @@
 from django.db import models
 from datetime import datetime
+from django.contrib.auth.models import AbstractUser
+from django.db.models.fields import related
+
 
 
 class Clinic(models.Model):
@@ -7,6 +10,7 @@ class Clinic(models.Model):
     Email = models.EmailField(max_length = 254)
     Telephone = models.CharField(max_length=50)
     Location = models.CharField(max_length=70)
+    Password = models.CharField(max_length = 50, null=True, blank= True)
     OpeningTime = models.TimeField()
     ClosingTime = models.TimeField()
 
@@ -16,6 +20,7 @@ class Doctor(models.Model):
     Last_name = models.CharField(max_length=50)
     Email = models.EmailField(max_length = 254)
     Mobile = models.CharField(max_length = 15)
+    Password = models.CharField(max_length = 50, null=True, blank= True)
     Location = models.CharField(max_length=70)
     Cnic = models.CharField(max_length=15)
     Qualification = models.CharField(max_length=50)
@@ -27,6 +32,7 @@ class Patient(models.Model):
     Last_name = models.CharField(max_length=50)
     Email = models.EmailField(max_length = 254)
     Mobile = models.CharField(max_length = 15)
+    Password = models.CharField(max_length = 50, null=True, blank= True)
     Location = models.CharField(max_length=70)
     Cnic = models.CharField(max_length=15)
 
@@ -43,6 +49,12 @@ class AppointmentInfo(models.Model):
     Prescription = models.CharField(max_length=50)
     Medicine = models.CharField(max_length=50)
     AppointmentID = models.ForeignKey(Appointment, on_delete=models.CASCADE, blank = True, null = True)
+
+
+class User(AbstractUser):
+    user_type = models.CharField(max_length=50, default='null')
+
+
 
 
 # class Appointment(models.Model):

@@ -20,7 +20,9 @@ urlpatterns = [
     path(r"api/appointment/<int:pk>", AppointmentDetail.as_view()),
     path(r'api/appointment-info/', AppointmentInfoDetail.as_view()),
     path(r'api/appointment-info/<int:pk>', AppointmentInfoDetail.as_view()),
+    path(r'api/login/', Login.as_view()),
 
 ]
 
 urlpatterns += router.urls
+

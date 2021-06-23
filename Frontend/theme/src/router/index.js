@@ -39,7 +39,9 @@ const router = new Router({
       
 
       //Register/Login
-      route('Register', null, '/register'),
+      route('Clinic Register', null, '/register/clinic'),
+      route('Doctor Register', null, '/register/doctor'),
+      route('Patient Register', null, '/register/patient'),
       route('Login', null, '/login'),
 
       // Maps
